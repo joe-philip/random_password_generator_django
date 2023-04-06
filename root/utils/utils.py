@@ -4,5 +4,5 @@ def success(data) -> dict:
         'message': 'success'
     }
     if data is not None:
-        response['data']: data
+        response['data'] = data
     return response
