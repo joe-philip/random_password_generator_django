@@ -15,6 +15,8 @@ class ContactUs(models.Model):
 
     class Meta:
         db_table = 'contact_us'
+        verbose_name = 'Contact us'
+        verbose_name_plural = 'Contact us'
 
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
