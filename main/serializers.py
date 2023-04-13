@@ -23,7 +23,8 @@ class ContactUsSerializer(serializers.ModelSerializer):
             subject=f'New response {self.validated_data.get("subject")}',
             message=self.validated_data.get('message'),
             recipient_list=settings.EMAIL_RECIEPENTS,
-            fail_silently=False
+            fail_silently=False,
+            from_email='joe.philip@hotmail.co.in'
         )
         send_mail(**mail_data)
 
