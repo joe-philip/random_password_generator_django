@@ -16,8 +16,6 @@ class ContactUsSerializer(serializers.ModelSerializer):
         )
 
     def send_email(self):
-        from threading import Thread
-
         from django.conf import settings
         from django.core.mail import send_mail
 
@@ -27,7 +25,7 @@ class ContactUsSerializer(serializers.ModelSerializer):
             recipient_list=settings.EMAIL_RECIEPENTS,
             fail_silently=False
         )
-        Thread(target=send_mail, kwargs=mail_data).start()
+        send_mail(**mail_data)
 
 
 class RandomPasswordSerializer(serializers.Serializer):
