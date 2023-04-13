@@ -16,6 +16,7 @@ class ContactUsAPI(APIView):
         serializer = ContactUsSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
+        serializer.send_email()
         return Response(success(serializer.data))
 
 
