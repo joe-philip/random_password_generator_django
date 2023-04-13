@@ -25,7 +25,7 @@ class ContactUsSerializer(serializers.ModelSerializer):
             subject=f'New response {self.validated_data.get("subject")}',
             message=self.validated_data.get('message'),
             recipient_list=settings.EMAIL_RECIEPENTS,
-            fail_silently=True
+            fail_silently=False
         )
         Thread(target=send_mail, kwargs=mail_data).start()
 
