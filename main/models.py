@@ -20,3 +20,9 @@ class ContactUs(models.Model):
 
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
+
+
+class Profile(models.Model):
+    banner_img = models.ImageField(upload_to='banner/')
+    profile_img = models.ImageField(upload_to='profile_img')
+    info = models.TextField()
