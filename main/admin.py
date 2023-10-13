@@ -1,6 +1,8 @@
 from django.contrib import admin
 
-from .models import ContactUs, Profile, Skills, SocialMedia
+from .models import (ContactUs, Profile, Skills, SocialMedia, WorkExperience,
+                     WorkExperienceAdditionalData,
+                     WorkExperienceRolesAndResponsibilities)
 
 # Register your models here.
 
@@ -23,3 +25,6 @@ admin.site.register(ContactUs, ContactUsAdmin)
 admin.site.register(Profile)
 admin.site.register(Skills)
 admin.site.register(SocialMedia)
+admin.site.register(WorkExperience)
+admin.site.register(WorkExperienceAdditionalData)
+admin.site.register(WorkExperienceRolesAndResponsibilities)

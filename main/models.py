@@ -58,7 +58,7 @@ class WorkExperience(models.Model):
 class WorkExperienceAdditionalData(models.Model):
     experience = models.ForeignKey(WorkExperience, on_delete=models.CASCADE)
     key = models.CharField(max_length=20)
-    value = models.TextField(max_length=20)
+    value = models.TextField()
 
     class Meta:
         db_table = 'work_experience_additional_data'
