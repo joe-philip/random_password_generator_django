@@ -1,4 +1,3 @@
-from .serializers import ProfileSerializer
 from random import choice, shuffle
 
 from rest_framework.request import Request
@@ -8,6 +7,7 @@ from rest_framework.views import APIView
 from root.utils.utils import success
 
 from .models import Profile
+from .serializers import ProfileSerializer
 
 # Create your views here.
 
