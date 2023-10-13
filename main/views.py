@@ -1,3 +1,4 @@
+from .serializers import ProfileSerializer
 from random import choice, shuffle
 
 from rest_framework.request import Request
@@ -5,6 +6,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from root.utils.utils import success
+
+from .models import Profile
 
 # Create your views here.
 
@@ -43,3 +46,10 @@ class RandomPasswordAPI(APIView):
         password_list = list(password)
         shuffle(password_list)
         return Response(success(''.join(password_list)))
+
+
+class ProfileAPI(APIView):
+    def get(self, request: Request) -> Response:
+        profile = Profile.objects.first()
+        serializer = ProfileSerializer(profile, context={'request': request})
+        return Response(success(serializer.data))

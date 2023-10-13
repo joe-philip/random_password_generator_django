@@ -1,4 +1,9 @@
+from collections import OrderedDict
+
 from rest_framework import serializers
+
+from .models import (Profile, WorkExperience, WorkExperienceAdditionalData,
+                     WorkExperienceRolesAndResponsibilities)
 
 
 class ContactUsSerializer(serializers.ModelSerializer):
@@ -48,3 +53,49 @@ class RandomPasswordSerializer(serializers.Serializer):
         if True in attrs.values():
             return super().validate(attrs)
         raise serializers.ValidationError('Select atleast one')
+
+
+class WorkExperienceAdditionalDataSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WorkExperienceAdditionalData
+        exclude = ('experience',)
+
+
+class WorkExperienceRolesAndResponsibilitiesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WorkExperienceRolesAndResponsibilities
+        exclude = ('experience',)
+
+
+class WorkExperienceSerializer(serializers.ModelSerializer):
+    work_experience_additional_data = serializers.SerializerMethodField()
+    work_experience_roles_and_responsibilities = serializers.SerializerMethodField()
+
+    def get_work_experience_additional_data(self, instance: WorkExperience) -> OrderedDict:
+        queryset = WorkExperienceAdditionalData.objects.filter(
+            experience=instance
+        )
+        return WorkExperienceAdditionalDataSerializer(queryset, many=True).data
+
+    def get_work_experience_roles_and_responsibilities(self, instance: WorkExperience) -> OrderedDict:
+        queryset = WorkExperienceRolesAndResponsibilities.objects.filter(
+            experience=instance
+        )
+        return WorkExperienceRolesAndResponsibilitiesSerializer(queryset, many=True).data
+
+    class Meta:
+        model = WorkExperience
+        exclude = ('profile',)
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    work_experience = serializers.SerializerMethodField()
+
+    def get_work_experience(self, instance: Profile) -> OrderedDict:
+        queryset = WorkExperience.objects.filter(profile=instance)
+        return WorkExperienceSerializer(queryset, many=True).data
+
+    class Meta:
+        model = Profile
+        fields = '__all__'
+        depth = 1
