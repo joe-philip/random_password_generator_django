@@ -43,7 +43,22 @@ class SocialMedia(models.Model):
     def __str__(self) -> str: return self.icon
 
 
+class Profile(models.Model):
+    banner_img = models.ImageField(upload_to='banner/')
+    profile_img = models.ImageField(upload_to='profile_img')
+    info = models.TextField()
+    skills = models.ManyToManyField(Skills)
+    social_media = models.ManyToManyField(SocialMedia)
+
+    class Meta:
+        db_table = 'profile'
+        verbose_name = 'Profile'
+
+    def __str__(self) -> str: return f'{self.id}'
+
+
 class WorkExperience(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     title = models.CharField(max_length=25)
     logo = models.ImageField(upload_to='work_experience/logos')
     created_at = models.DateTimeField(auto_now_add=True)
@@ -67,22 +82,7 @@ class WorkExperienceAdditionalData(models.Model):
     def __str__(self) -> str: return f'{self.key}: {self.value}'
 
 
-class Profile(models.Model):
-    banner_img = models.ImageField(upload_to='banner/')
-    profile_img = models.ImageField(upload_to='profile_img')
-    info = models.TextField()
-    skills = models.ManyToManyField(Skills)
-    social_media = models.ManyToManyField(SocialMedia)
-
-    class Meta:
-        db_table = 'profile'
-        verbose_name = 'Profile'
-
-    def __str__(self) -> str: return f'{self.id}'
-
-
 class WorkExperienceRolesAndResponsibilities(models.Model):
-    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     experience = models.ForeignKey(WorkExperience, on_delete=models.CASCADE)
     label = models.TextField()
 
