@@ -61,6 +61,7 @@ class WorkExperience(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     title = models.CharField(max_length=25)
     logo = models.ImageField(upload_to='work_experience/logos')
+    company_url = models.URLField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
