@@ -93,7 +93,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     def get_work_experience(self, instance: Profile) -> OrderedDict:
         queryset = WorkExperience.objects.filter(profile=instance)
-        return WorkExperienceSerializer(queryset, many=True).data
+        return WorkExperienceSerializer(queryset, context=self.context, many=True).data
 
     class Meta:
         model = Profile
