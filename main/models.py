@@ -22,10 +22,21 @@ class ContactUs(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 
+class Skills(models.Model):
+    name = models.CharField(max_length=30)
+
+    class Meta:
+        db_table = 'skills'
+        verbose_name = 'Skill'
+
+    def __str__(self) -> str: return self.name
+
+
 class Profile(models.Model):
     banner_img = models.ImageField(upload_to='banner/')
     profile_img = models.ImageField(upload_to='profile_img')
     info = models.TextField()
+    skills = models.ManyToManyField(Skills)
 
     class Meta:
         db_table = 'profile'
