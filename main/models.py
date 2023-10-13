@@ -34,7 +34,7 @@ class Skills(models.Model):
 
 class SocialMedia(models.Model):
     link = models.URLField()
-    icon = models.CharField(max_length=10)
+    icon = models.CharField(max_length=20)
 
     class Meta:
         db_table = 'social_media'
