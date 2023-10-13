@@ -26,3 +26,9 @@ class Profile(models.Model):
     banner_img = models.ImageField(upload_to='banner/')
     profile_img = models.ImageField(upload_to='profile_img')
     info = models.TextField()
+
+    class Meta:
+        db_table = 'profile'
+        verbose_name = 'Profile'
+
+    def __str__(self) -> str: return f'{self.id}'
