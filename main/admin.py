@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import ContactUs, Profile
+from .models import ContactUs, Profile, Skills
 
 # Register your models here.
 
@@ -21,3 +21,4 @@ class ContactUsAdmin(admin.ModelAdmin):
 
 admin.site.register(ContactUs, ContactUsAdmin)
 admin.site.register(Profile)
+admin.site.register(Skills)
