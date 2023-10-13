@@ -67,18 +67,6 @@ class WorkExperienceAdditionalData(models.Model):
     def __str__(self) -> str: return f'{self.key}: {self.value}'
 
 
-class WorkExperienceRolesAndResponsibilities(models.Model):
-    experience = models.ForeignKey(WorkExperience, on_delete=models.CASCADE)
-    label = models.TextField()
-
-    class Meta:
-        db_table = 'work_experience_roles_and_responsibilities'
-        verbose_name = 'Work experience role and responsibility'
-        verbose_name = 'Work experience roles and responsibilities'
-
-    def __str__(self) -> str: return self.label
-
-
 class Profile(models.Model):
     banner_img = models.ImageField(upload_to='banner/')
     profile_img = models.ImageField(upload_to='profile_img')
@@ -91,3 +79,16 @@ class Profile(models.Model):
         verbose_name = 'Profile'
 
     def __str__(self) -> str: return f'{self.id}'
+
+
+class WorkExperienceRolesAndResponsibilities(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    experience = models.ForeignKey(WorkExperience, on_delete=models.CASCADE)
+    label = models.TextField()
+
+    class Meta:
+        db_table = 'work_experience_roles_and_responsibilities'
+        verbose_name = 'Work experience role and responsibility'
+        verbose_name = 'Work experience roles and responsibilities'
+
+    def __str__(self) -> str: return self.label

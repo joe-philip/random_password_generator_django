@@ -1,72 +1,72 @@
 [
-{
-    "model": "main.skills",
-    "pk": 1,
-    "fields": {
-        "name": "Python"
+    {
+        "model": "main.skills",
+        "pk": 1,
+        "fields": {
+            "name": "Python"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 2,
+        "fields": {
+            "name": "Django"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 3,
+        "fields": {
+            "name": "HTML"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 4,
+        "fields": {
+            "name": "CSS"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 5,
+        "fields": {
+            "name": "JavaScript"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 6,
+        "fields": {
+            "name": "ReactJS"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 7,
+        "fields": {
+            "name": "GIT"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 8,
+        "fields": {
+            "name": "MySQL"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 9,
+        "fields": {
+            "name": "PostgreSQL"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 10,
+        "fields": {
+            "name": "SQLite3"
+        }
     }
-},
-{
-    "model": "main.skills",
-    "pk": 2,
-    "fields": {
-        "name": "Django"
-    }
-},
-{
-    "model": "main.skills",
-    "pk": 3,
-    "fields": {
-        "name": "HTML"
-    }
-},
-{
-    "model": "main.skills",
-    "pk": 4,
-    "fields": {
-        "name": "CSS"
-    }
-},
-{
-    "model": "main.skills",
-    "pk": 5,
-    "fields": {
-        "name": "JavaScript"
-    }
-},
-{
-    "model": "main.skills",
-    "pk": 6,
-    "fields": {
-        "name": "ReactJS"
-    }
-},
-{
-    "model": "main.skills",
-    "pk": 7,
-    "fields": {
-        "name": "GIT"
-    }
-},
-{
-    "model": "main.skills",
-    "pk": 8,
-    "fields": {
-        "name": "MySQL"
-    }
-},
-{
-    "model": "main.skills",
-    "pk": 9,
-    "fields": {
-        "name": "PostgreSQL"
-    }
-},
-{
-    "model": "main.skills",
-    "pk": 10,
-    "fields": {
-        "name": "SQLite3"
-    }
-}
 ]

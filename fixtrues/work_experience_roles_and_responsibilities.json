@@ -1,82 +1,82 @@
 [
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 1,
-    "fields": {
-        "experience": 1,
-        "label": "Provide python training to new interns."
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 1,
+        "fields": {
+            "experience": 1,
+            "label": "Provide python training to new interns."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 2,
+        "fields": {
+            "experience": 1,
+            "label": "Design Responsive HTML forms for projects."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 3,
+        "fields": {
+            "experience": 1,
+            "label": "Work part in Django projects."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 4,
+        "fields": {
+            "experience": 2,
+            "label": "Develop Database diagrams for projects."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 5,
+        "fields": {
+            "experience": 2,
+            "label": "Develop REST API\"s for web apps."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 6,
+        "fields": {
+            "experience": 2,
+            "label": "Add custom features for API\"s."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 7,
+        "fields": {
+            "experience": 2,
+            "label": "Define custom functionalities for django projects."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 8,
+        "fields": {
+            "experience": 2,
+            "label": "Define web sockets in web apps for real-time app features."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 9,
+        "fields": {
+            "experience": 2,
+            "label": "Integrate external API services inside apps."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 10,
+        "fields": {
+            "experience": 2,
+            "label": "Provide python training to interns."
+        }
     }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 2,
-    "fields": {
-        "experience": 1,
-        "label": "Design Responsive HTML forms for projects."
-    }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 3,
-    "fields": {
-        "experience": 1,
-        "label": "Work part in Django projects."
-    }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 4,
-    "fields": {
-        "experience": 2,
-        "label": "Develop Database diagrams for projects."
-    }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 5,
-    "fields": {
-        "experience": 2,
-        "label": "Develop REST API\"s for web apps."
-    }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 6,
-    "fields": {
-        "experience": 2,
-        "label": "Add custom features for API\"s."
-    }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 7,
-    "fields": {
-        "experience": 2,
-        "label": "Define custom functionalities for django projects."
-    }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 8,
-    "fields": {
-        "experience": 2,
-        "label": "Define web sockets in web apps for real-time app features."
-    }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 9,
-    "fields": {
-        "experience": 2,
-        "label": "Integrate external API services inside apps."
-    }
-},
-{
-    "model": "main.workexperiencerolesandresponsibilities",
-    "pk": 10,
-    "fields": {
-        "experience": 2,
-        "label": "Provide python training to interns."
-    }
-}
 ]

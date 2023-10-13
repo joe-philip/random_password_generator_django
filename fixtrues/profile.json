@@ -1,32 +1,32 @@
 [
-{
-    "model": "main.profile",
-    "pk": 1,
-    "fields": {
-        "banner_img": "banner/hero.jpg",
-        "profile_img": "profile_img/image.jpg",
-        "info": "Hi, I'm Joe Philip and I'm a Python developer with more than 2 years of experience. I'm passionate about writing clean, efficient, and maintainable code that solves real-world problems. My journey as a developer started when I was 20 years old and was fascinated by how technology can solve complex problems. I learned programming on my own and started working on small projects of my own, which eventually led me to pursue a career as a developer. Over the years, I've worked on a wide range of projects built using Python's most popular web framework Django. I'm comfortable with back-end development and have experience working with databases like MySQL and PostgreSQL. One of my favorite things about Python is its simplicity and readability. I strive to write code that is easy to understand, maintain, and scale. In my free time, I love to contribute to open-source projects and stay up-to-date with the latest developments in the Python community. If you're looking for a Python developer who is passionate about writing clean, efficient, and maintainable code, then I'd love to work with you. Feel free to get in touch with me to discuss your project requirements.",
-        "skills": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-        ],
-        "social_media": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-        ]
+    {
+        "model": "main.profile",
+        "pk": 1,
+        "fields": {
+            "banner_img": "banner/hero.jpg",
+            "profile_img": "profile_img/image.jpg",
+            "info": "Hi, I'm Joe Philip and I'm a Python developer with more than 2 years of experience. I'm passionate about writing clean, efficient, and maintainable code that solves real-world problems. My journey as a developer started when I was 20 years old and was fascinated by how technology can solve complex problems. I learned programming on my own and started working on small projects of my own, which eventually led me to pursue a career as a developer. Over the years, I've worked on a wide range of projects built using Python's most popular web framework Django. I'm comfortable with back-end development and have experience working with databases like MySQL and PostgreSQL. One of my favorite things about Python is its simplicity and readability. I strive to write code that is easy to understand, maintain, and scale. In my free time, I love to contribute to open-source projects and stay up-to-date with the latest developments in the Python community. If you're looking for a Python developer who is passionate about writing clean, efficient, and maintainable code, then I'd love to work with you. Feel free to get in touch with me to discuss your project requirements.",
+            "skills": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "social_media": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        }
     }
-}
 ]
