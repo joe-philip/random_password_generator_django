@@ -152,7 +152,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Django cors headers
 # https://pypi.org/project/django-cors-headers/
 
-CORS_ALLOWED_ORIGINS = env.list('WHITELIST')
+CORS_ALLOWED_ORIGINS = env.list('WHITELIST', default=[])
 CORS_ALLOW_ALL_ORIGINS = env.bool('CORS_ALLOW_ALL_ORIGINS')
 
 
