@@ -32,11 +32,23 @@ class Skills(models.Model):
     def __str__(self) -> str: return self.name
 
 
+class SocialMedia(models.Model):
+    link = models.URLField()
+    icon = models.CharField(max_length=10)
+
+    class Meta:
+        db_table = 'social_media'
+        verbose_name = 'Social media'
+
+    def __str__(self) -> str: return self.icon
+
+
 class Profile(models.Model):
     banner_img = models.ImageField(upload_to='banner/')
     profile_img = models.ImageField(upload_to='profile_img')
     info = models.TextField()
     skills = models.ManyToManyField(Skills)
+    social_media = models.ManyToManyField(SocialMedia)
 
     class Meta:
         db_table = 'profile'
