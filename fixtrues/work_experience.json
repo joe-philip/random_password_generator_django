@@ -1,0 +1,20 @@
+[
+{
+    "model": "main.workexperience",
+    "pk": 1,
+    "fields": {
+        "title": "Scopos Technologies",
+        "logo": "work_experience/logos/scopos.png",
+        "created_at": "2023-10-13T10:47:29.603Z"
+    }
+},
+{
+    "model": "main.workexperience",
+    "pk": 2,
+    "fields": {
+        "title": "Aatoon Solutions",
+        "logo": "work_experience/logos/aatoon.png",
+        "created_at": "2023-10-13T10:47:51.181Z"
+    }
+}
+]

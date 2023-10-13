@@ -1,0 +1,58 @@
+[
+{
+    "model": "main.socialmedia",
+    "pk": 1,
+    "fields": {
+        "link": "https://www.instagram.com/riderbones/",
+        "icon": "logo-instagram"
+    }
+},
+{
+    "model": "main.socialmedia",
+    "pk": 2,
+    "fields": {
+        "link": "https://www.facebook.com/unpredictableupshifts/",
+        "icon": "logo-facebook"
+    }
+},
+{
+    "model": "main.socialmedia",
+    "pk": 3,
+    "fields": {
+        "link": "https://github.com/joe-philip/",
+        "icon": "logo-github"
+    }
+},
+{
+    "model": "main.socialmedia",
+    "pk": 4,
+    "fields": {
+        "link": "https://gitlab.com/joe-philip/",
+        "icon": "logo-gitlab"
+    }
+},
+{
+    "model": "main.socialmedia",
+    "pk": 5,
+    "fields": {
+        "link": "https://www.linkedin.com/in/joe-philip/",
+        "icon": "logo-linkedin"
+    }
+},
+{
+    "model": "main.socialmedia",
+    "pk": 6,
+    "fields": {
+        "link": "https://twitter.com/joephilip95",
+        "icon": "logo-twitter"
+    }
+},
+{
+    "model": "main.socialmedia",
+    "pk": 7,
+    "fields": {
+        "link": "https://wa.me/919633689769",
+        "icon": "logo-whatsapp"
+    }
+}
+]

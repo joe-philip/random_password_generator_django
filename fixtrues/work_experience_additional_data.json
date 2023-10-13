@@ -1,0 +1,74 @@
+[
+{
+    "model": "main.workexperienceadditionaldata",
+    "pk": 1,
+    "fields": {
+        "experience": 1,
+        "key": "Role",
+        "value": "Python developer"
+    }
+},
+{
+    "model": "main.workexperienceadditionaldata",
+    "pk": 2,
+    "fields": {
+        "experience": 1,
+        "key": "Internship duration",
+        "value": "15-01-2020 - 16-02-2"
+    }
+},
+{
+    "model": "main.workexperienceadditionaldata",
+    "pk": 3,
+    "fields": {
+        "experience": 1,
+        "key": "Work period",
+        "value": "20-02-2021 - 30-09-2"
+    }
+},
+{
+    "model": "main.workexperienceadditionaldata",
+    "pk": 4,
+    "fields": {
+        "experience": 1,
+        "key": "Location",
+        "value": "A&S TOWER, BYPASS JUNCTION, Kallumthazham, Kollam, Kerala 691004"
+    }
+},
+{
+    "model": "main.workexperienceadditionaldata",
+    "pk": 5,
+    "fields": {
+        "experience": 2,
+        "key": "Joining date",
+        "value": "22-11-2021"
+    }
+},
+{
+    "model": "main.workexperienceadditionaldata",
+    "pk": 6,
+    "fields": {
+        "experience": 2,
+        "key": "Status",
+        "value": "Presently working"
+    }
+},
+{
+    "model": "main.workexperienceadditionaldata",
+    "pk": 7,
+    "fields": {
+        "experience": 2,
+        "key": "Role",
+        "value": "Junior Python developer"
+    }
+},
+{
+    "model": "main.workexperienceadditionaldata",
+    "pk": 8,
+    "fields": {
+        "experience": 2,
+        "key": "Location",
+        "value": "Unit 1B, First Floor, Carnival Infopark Phase II Infopark Kochi P.O Kakkand, Kochi, Kerala 682042"
+    }
+}
+]
