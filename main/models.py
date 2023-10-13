@@ -43,6 +43,42 @@ class SocialMedia(models.Model):
     def __str__(self) -> str: return self.icon
 
 
+class WorkExperience(models.Model):
+    title = models.CharField(max_length=25)
+    logo = models.ImageField(upload_to='work_experience/logos')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'work_experience'
+        verbose_name = 'Work experience'
+
+    def __str__(self) -> str: return self.title
+
+
+class WorkExperienceAdditionalData(models.Model):
+    experience = models.ForeignKey(WorkExperience, on_delete=models.CASCADE)
+    key = models.CharField(max_length=20)
+    value = models.TextField(max_length=20)
+
+    class Meta:
+        db_table = 'work_experience_additional_data'
+        verbose_name = 'Work experience additional data'
+
+    def __str__(self) -> str: return f'{self.key}: {self.value}'
+
+
+class WorkExperienceRolesAndResponsibilities(models.Model):
+    experience = models.ForeignKey(WorkExperience, on_delete=models.CASCADE)
+    label = models.TextField()
+
+    class Meta:
+        db_table = 'work_experience_roles_and_responsibilities'
+        verbose_name = 'Work experience role and responsibility'
+        verbose_name = 'Work experience roles and responsibilities'
+
+    def __str__(self) -> str: return self.label
+
+
 class Profile(models.Model):
     banner_img = models.ImageField(upload_to='banner/')
     profile_img = models.ImageField(upload_to='profile_img')
