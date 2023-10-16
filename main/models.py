@@ -93,3 +93,29 @@ class WorkExperienceRolesAndResponsibilities(models.Model):
         verbose_name = 'Work experience roles and responsibilities'
 
     def __str__(self) -> str: return self.label
+
+
+class Projects(models.Model):
+    title = models.CharField(max_length=50)
+    title_link = models.URLField(null=True)
+    description = models.TextField()
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'projects'
+        verbose_name = 'Project'
+
+    def __str__(self) -> str: return self.title
+
+
+class ProjectLinks(models.Model):
+    project = models.ForeignKey(Projects, on_delete=models.PROTECT)
+    label = models.CharField(max_length=50)
+    link = models.URLField()
+
+    class Meta:
+        db_table = 'project_links'
+        verbose_name = 'Project link'
+
+    def __str__(self) -> str: return f'{self.id}'
