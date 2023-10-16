@@ -1,0 +1,83 @@
+[
+    {
+        "model": "main.projectlinks",
+        "pk": 1,
+        "fields": {
+            "project": 1,
+            "label": "View Repository",
+            "link": "https://github.com/joe-philip/calcPythonTkinter"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 2,
+        "fields": {
+            "project": 2,
+            "label": "Backend Repository",
+            "link": "https://github.com/joe-philip/random_password_generator_django"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 3,
+        "fields": {
+            "project": 2,
+            "label": "Frontend Repository",
+            "link": "https://github.com/joe-philip/random_password_generator_react"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 4,
+        "fields": {
+            "project": 2,
+            "label": "View Deployment",
+            "link": "https://joe-philip.github.io/random_password_gener"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 5,
+        "fields": {
+            "project": 3,
+            "label": "View Repository",
+            "link": "https://gitlab.com/joe-philip/python_code_snippets"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 6,
+        "fields": {
+            "project": 3,
+            "label": "View extension in VS Code marketplace",
+            "link": "https://marketplace.visualstudio.com/items?itemName=JoePhilip.pythondjangocodesnippet&ssr=false#overview"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 7,
+        "fields": {
+            "project": 3,
+            "label": "View Documentation page",
+            "link": "https://joe-philip.github.io/python_django_rest_framework_code_snippets/"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 8,
+        "fields": {
+            "project": 4,
+            "label": "View Repository",
+            "link": "https://github.com/joe-philip/markdown-snippets"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 9,
+        "fields": {
+            "project": 4,
+            "label": "View Extension in vscode marketplace",
+            "link": "https://marketplace.visualstudio.com/items?itemName=JoePhilip.markdown-code-snippets"
+        }
+    }
+]

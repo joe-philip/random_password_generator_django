@@ -1,0 +1,46 @@
+[
+    {
+        "model": "main.projects",
+        "pk": 1,
+        "fields": {
+            "title": "Basic Calculator using Python",
+            "title_link": "https://joe-philip.github.io/random_password_generator_react/",
+            "description": "GUI Calculator is basic calculator project done with Tkinter, Python’s GUI framework",
+            "profile": 1,
+            "created_at": "2023-10-16T01:35:14.419Z"
+        }
+    },
+    {
+        "model": "main.projects",
+        "pk": 2,
+        "fields": {
+            "title": "Random password generator",
+            "title_link": "https://joe-philip.github.io/random_password_generator_react/",
+            "description": "Random password generator is a basic web app developed for generating strong random passwords. The app is build using front-end technology ReactJS and backend technology Django.",
+            "profile": 1,
+            "created_at": "2023-10-16T01:35:55.153Z"
+        }
+    },
+    {
+        "model": "main.projects",
+        "pk": 3,
+        "fields": {
+            "title": "Python django code snippets for VSCode",
+            "title_link": "https://marketplace.visualstudio.com/items?itemName=JoePhilip.pythondjangocodesnippet&ssr=false#overview",
+            "description": "Python django rest framework code snippets for VSCode is a VSCode extension that provides a collection of useful code snippets for Python programming in Django rest framework. The extension includes snippets for commonly used code segments, such as loops, functions, file handling, regular expressions, and more. With this extension, you can save valuable time and effort by quickly inserting these code segments into your projects, without the need to manually type them out.",
+            "profile": 1,
+            "created_at": "2023-10-16T01:36:24.381Z"
+        }
+    },
+    {
+        "model": "main.projects",
+        "pk": 4,
+        "fields": {
+            "title": "Basic markdown snippets extension for vscode",
+            "title_link": "https://marketplace.visualstudio.com/items?itemName=JoePhilip.markdown-code-snippets",
+            "description": "This extension is designed to enhance your Markdown editing experience by providing a collection of useful and time-saving code snippets that you can easily insert into your Markdown documents. Whether you're writing technical documentation, blog posts, or just taking notes, these snippets will help you format your content quickly and efficiently",
+            "profile": 1,
+            "created_at": "2023-10-16T01:37:01.133Z"
+        }
+    }
+]
