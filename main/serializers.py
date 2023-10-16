@@ -116,7 +116,9 @@ class ProfileSerializer(serializers.ModelSerializer):
         return WorkExperienceSerializer(queryset, context=self.context, many=True).data
 
     def get_projects(self, instance: Profile) -> OrderedDict:
-        queryset = Projects.objects.filter(profile=instance)
+        queryset = Projects.objects.filter(
+            profile=instance
+        ).order_by('-created_at')
         return ProjectSerializer(queryset, many=True).data
 
     class Meta:
