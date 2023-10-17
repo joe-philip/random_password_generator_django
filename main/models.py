@@ -51,6 +51,7 @@ class Profile(models.Model):
     info = models.TextField()
     skills = models.ManyToManyField(Skills)
     social_media = models.ManyToManyField(SocialMedia)
+    resume = models.FileField(upload_to='resume')
 
     class Meta:
         db_table = 'profile'

@@ -1,5 +1,7 @@
 from random import choice, shuffle
 
+from django.http.response import FileResponse
+from rest_framework.exceptions import NotFound
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -53,3 +55,10 @@ class ProfileAPI(APIView):
         profile = Profile.objects.first()
         serializer = ProfileSerializer(profile, context={'request': request})
         return Response(success(serializer.data))
+
+
+class DownloadResumeAPI(APIView):
+    def get(self, request, id: int) -> FileResponse:
+        if (profile := Profile.objects.filter(id=id)).exists():
+            return FileResponse(profile.first().resume, as_attachment=True, filename='resume.pdf')
+        raise NotFound('Profile not found')
