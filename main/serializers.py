@@ -2,8 +2,8 @@ from collections import OrderedDict
 
 from rest_framework import serializers
 
-from .models import (Profile, ProjectLinks, Projects, WorkExperience,
-                     WorkExperienceAdditionalData,
+from .models import (ContactInfo, Profile, ProjectLinks, Projects,
+                     WorkExperience, WorkExperienceAdditionalData,
                      WorkExperienceRolesAndResponsibilities)
 
 
@@ -110,18 +110,29 @@ class ProjectLinksSerializer(serializers.ModelSerializer):
 class ProfileSerializer(serializers.ModelSerializer):
     work_experience = serializers.SerializerMethodField()
     projects = serializers.SerializerMethodField()
+    contact_info = serializers.SerializerMethodField()
 
-    def get_work_experience(self, instance: Profile) -> OrderedDict:
+    def get_work_experience(self, instance: Profile) -> OrderedDict or list:
         queryset = WorkExperience.objects.filter(profile=instance)
         return WorkExperienceSerializer(queryset, context=self.context, many=True).data
 
-    def get_projects(self, instance: Profile) -> OrderedDict:
+    def get_projects(self, instance: Profile) -> OrderedDict or list:
         queryset = Projects.objects.filter(
             profile=instance
         ).order_by('-created_at')
         return ProjectSerializer(queryset, many=True).data
 
+    def get_contact_info(self, instance: Profile) -> OrderedDict or list:
+        queryset = ContactInfo.objects.filter(profile=instance)
+        return ContactInfoSerializer(queryset, many=True).data
+
     class Meta:
         model = Profile
         fields = '__all__'
         depth = 1
+
+
+class ContactInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ContactInfo
+        exclude = ('profile',)
