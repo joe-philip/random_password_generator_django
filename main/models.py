@@ -118,7 +118,7 @@ class ProjectLinks(models.Model):
         db_table = 'project_links'
         verbose_name = 'Project link'
 
-    def __str__(self) -> str: return f'{self.id}'
+    def __str__(self) -> str: return self.label
 
 
 class ContactInfo(models.Model):
