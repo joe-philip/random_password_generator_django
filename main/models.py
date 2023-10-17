@@ -44,6 +44,8 @@ class SocialMedia(models.Model):
 
 
 class Profile(models.Model):
+    name = models.CharField(max_length=20)
+    job_role = models.CharField(max_length=30)
     banner_img = models.ImageField(upload_to='banner/')
     profile_img = models.ImageField(upload_to='profile_img')
     info = models.TextField()
@@ -54,7 +56,7 @@ class Profile(models.Model):
         db_table = 'profile'
         verbose_name = 'Profile'
 
-    def __str__(self) -> str: return f'{self.id}'
+    def __str__(self) -> str: return self.name
 
 
 class WorkExperience(models.Model):
