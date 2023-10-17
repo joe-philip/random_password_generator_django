@@ -119,3 +119,15 @@ class ProjectLinks(models.Model):
         verbose_name = 'Project link'
 
     def __str__(self) -> str: return f'{self.id}'
+
+
+class ContactInfo(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    key = models.CharField(max_length=40)
+    value = models.CharField(max_length=40)
+
+    class Meta:
+        db_table = 'contact_info'
+        verbose_name = 'Contact info'
+
+    def __str__(self) -> str: return f'{self.key}: {self.value}'
