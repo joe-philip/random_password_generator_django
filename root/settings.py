@@ -95,7 +95,7 @@ install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': env('DB_ENGINE'),
-        'NAME': BASE_DIR / env('DB_NAME'),
+        'NAME': env('DB_NAME'),
         'USER': env('DB_USER', default=None),
         'PASSWORD': env('DB_PASSWORD', default=None),
         'HOST': env('DB_HOST', default=None)
