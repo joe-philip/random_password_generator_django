@@ -14,6 +14,7 @@ from os.path import join
 from pathlib import Path
 
 from environ import Env
+from pymysql import install_as_MySQLdb
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,10 +91,14 @@ WSGI_APPLICATION = 'root.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+install_as_MySQLdb()
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': env('DB_ENGINE'),
         'NAME': BASE_DIR / env('DB_NAME'),
+        'USER': env('DB_USER', default=None),
+        'PASSWORD': env('DB_PASSWORD', default=None),
+        'HOST': env('DB_HOST', default=None)
     }
 }
 
