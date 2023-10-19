@@ -1,0 +1,496 @@
+[
+    {
+        "model": "main.skills",
+        "pk": 1,
+        "fields": {
+            "name": "Python"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 2,
+        "fields": {
+            "name": "Django"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 3,
+        "fields": {
+            "name": "HTML"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 4,
+        "fields": {
+            "name": "CSS"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 5,
+        "fields": {
+            "name": "JavaScript"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 6,
+        "fields": {
+            "name": "ReactJS"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 7,
+        "fields": {
+            "name": "GIT"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 8,
+        "fields": {
+            "name": "MySQL"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 9,
+        "fields": {
+            "name": "PostgreSQL"
+        }
+    },
+    {
+        "model": "main.skills",
+        "pk": 10,
+        "fields": {
+            "name": "SQLite3"
+        }
+    },
+    {
+        "model": "main.socialmedia",
+        "pk": 1,
+        "fields": {
+            "link": "https://www.instagram.com/riderbones/",
+            "icon": "logo-instagram"
+        }
+    },
+    {
+        "model": "main.socialmedia",
+        "pk": 2,
+        "fields": {
+            "link": "https://www.facebook.com/unpredictableupshifts/",
+            "icon": "logo-facebook"
+        }
+    },
+    {
+        "model": "main.socialmedia",
+        "pk": 3,
+        "fields": {
+            "link": "https://github.com/joe-philip/",
+            "icon": "logo-github"
+        }
+    },
+    {
+        "model": "main.socialmedia",
+        "pk": 4,
+        "fields": {
+            "link": "https://gitlab.com/joe-philip/",
+            "icon": "logo-gitlab"
+        }
+    },
+    {
+        "model": "main.socialmedia",
+        "pk": 5,
+        "fields": {
+            "link": "https://www.linkedin.com/in/joe-philip/",
+            "icon": "logo-linkedin"
+        }
+    },
+    {
+        "model": "main.socialmedia",
+        "pk": 6,
+        "fields": {
+            "link": "https://twitter.com/joephilip95",
+            "icon": "logo-twitter"
+        }
+    },
+    {
+        "model": "main.socialmedia",
+        "pk": 7,
+        "fields": {
+            "link": "https://wa.me/919633689769",
+            "icon": "logo-whatsapp"
+        }
+    },
+    {
+        "model": "main.profile",
+        "pk": 1,
+        "fields": {
+            "name": "Joe Philip",
+            "job_role": "Python web developer",
+            "banner_img": "banner/hero.jpg",
+            "profile_img": "profile_img/image.jpg",
+            "info": "Hi, I'm Joe Philip and I'm a Python developer with more than 2 years of experience. I'm passionate about writing clean, efficient, and maintainable code that solves real-world problems. My journey as a developer started when I was 20 years old and was fascinated by how technology can solve complex problems. I learned programming on my own and started working on small projects of my own, which eventually led me to pursue a career as a developer. Over the years, I've worked on a wide range of projects built using Python's most popular web framework Django. I'm comfortable with back-end development and have experience working with databases like MySQL and PostgreSQL. One of my favorite things about Python is its simplicity and readability. I strive to write code that is easy to understand, maintain, and scale. In my free time, I love to contribute to open-source projects and stay up-to-date with the latest developments in the Python community. If you're looking for a Python developer who is passionate about writing clean, efficient, and maintainable code, then I'd love to work with you. Feel free to get in touch with me to discuss your project requirements.",
+            "resume": "resume/1.pdf",
+            "skills": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ],
+            "social_media": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "main.workexperience",
+        "pk": 1,
+        "fields": {
+            "profile": 1,
+            "title": "Scopos Technologies",
+            "logo": "work_experience/logos/scopos.png",
+            "company_url": null,
+            "created_at": "2023-10-13T10:47:29.603Z"
+        }
+    },
+    {
+        "model": "main.workexperience",
+        "pk": 2,
+        "fields": {
+            "profile": 1,
+            "title": "Aatoon Solutions",
+            "logo": "work_experience/logos/aatoon.png",
+            "company_url": "https://aatoon.com",
+            "created_at": "2023-10-13T10:47:51.181Z"
+        }
+    },
+    {
+        "model": "main.workexperienceadditionaldata",
+        "pk": 1,
+        "fields": {
+            "experience": 1,
+            "key": "Role",
+            "value": "Python developer"
+        }
+    },
+    {
+        "model": "main.workexperienceadditionaldata",
+        "pk": 2,
+        "fields": {
+            "experience": 1,
+            "key": "Internship duration",
+            "value": "15-01-2020 - 16-02-2"
+        }
+    },
+    {
+        "model": "main.workexperienceadditionaldata",
+        "pk": 3,
+        "fields": {
+            "experience": 1,
+            "key": "Work period",
+            "value": "20-02-2021 - 30-09-2"
+        }
+    },
+    {
+        "model": "main.workexperienceadditionaldata",
+        "pk": 4,
+        "fields": {
+            "experience": 1,
+            "key": "Location",
+            "value": "A&S TOWER, BYPASS JUNCTION, Kallumthazham, Kollam, Kerala 691004"
+        }
+    },
+    {
+        "model": "main.workexperienceadditionaldata",
+        "pk": 5,
+        "fields": {
+            "experience": 2,
+            "key": "Joining date",
+            "value": "22-11-2021"
+        }
+    },
+    {
+        "model": "main.workexperienceadditionaldata",
+        "pk": 6,
+        "fields": {
+            "experience": 2,
+            "key": "Status",
+            "value": "Presently working"
+        }
+    },
+    {
+        "model": "main.workexperienceadditionaldata",
+        "pk": 7,
+        "fields": {
+            "experience": 2,
+            "key": "Role",
+            "value": "Junior Python developer"
+        }
+    },
+    {
+        "model": "main.workexperienceadditionaldata",
+        "pk": 8,
+        "fields": {
+            "experience": 2,
+            "key": "Location",
+            "value": "Unit 1B, First Floor, Carnival Infopark Phase II Infopark Kochi P.O Kakkand, Kochi, Kerala 682042"
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 1,
+        "fields": {
+            "experience": 1,
+            "label": "Provide python training to new interns."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 2,
+        "fields": {
+            "experience": 1,
+            "label": "Design Responsive HTML forms for projects."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 3,
+        "fields": {
+            "experience": 1,
+            "label": "Work part in Django projects."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 4,
+        "fields": {
+            "experience": 2,
+            "label": "Develop Database diagrams for projects."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 5,
+        "fields": {
+            "experience": 2,
+            "label": "Develop REST API\"s for web apps."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 6,
+        "fields": {
+            "experience": 2,
+            "label": "Add custom features for API\"s."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 7,
+        "fields": {
+            "experience": 2,
+            "label": "Define custom functionalities for django projects."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 8,
+        "fields": {
+            "experience": 2,
+            "label": "Define web sockets in web apps for real-time app features."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 9,
+        "fields": {
+            "experience": 2,
+            "label": "Integrate external API services inside apps."
+        }
+    },
+    {
+        "model": "main.workexperiencerolesandresponsibilities",
+        "pk": 10,
+        "fields": {
+            "experience": 2,
+            "label": "Provide python training to interns."
+        }
+    },
+    {
+        "model": "main.projects",
+        "pk": 1,
+        "fields": {
+            "title": "Basic Calculator using Python",
+            "title_link": "https://joe-philip.github.io/random_password_generator_react/",
+            "description": "Crafted a versatile calculator app using Python's Tkinter module. This user-friendly tool streamlines arithmetic tasks, enabling quick calculations for addition, subtraction, multiplication, and division. Its intuitive interface caters to daily mathematical needs. Whether you're a student or professional, this app simplifies number crunching.",
+            "profile": 1,
+            "created_at": "2023-10-16T01:35:14.419Z"
+        }
+    },
+    {
+        "model": "main.projects",
+        "pk": 2,
+        "fields": {
+            "title": "Random password generator",
+            "title_link": "https://joe-philip.github.io/random_password_generator_react/",
+            "description": "Developed a robust password generator application using ReactJS for the front-end and Django for the backend. This powerful tool creates secure, random passwords for users. With a combination of front-end user-friendliness and back-end security, it's an ideal solution for enhancing online safety. Protect your accounts with strong, unique passwords generated on the fly.",
+            "profile": 1,
+            "created_at": "2023-10-16T01:35:55.153Z"
+        }
+    },
+    {
+        "model": "main.projects",
+        "pk": 3,
+        "fields": {
+            "title": "Python django code snippets for VSCode",
+            "title_link": "https://marketplace.visualstudio.com/items?itemName=JoePhilip.pythondjangocodesnippet&ssr=false#overview",
+            "description": "Python django rest framework code snippets for VSCode is a VSCode extension that provides a collection of useful code snippets for Python programming in Django rest framework. The extension includes snippets for commonly used code segments, such as loops, functions, file handling, regular expressions, and more. With this extension, you can save valuable time and effort by quickly inserting these code segments into your projects, without the need to manually type them out.",
+            "profile": 1,
+            "created_at": "2023-10-16T01:36:24.381Z"
+        }
+    },
+    {
+        "model": "main.projects",
+        "pk": 4,
+        "fields": {
+            "title": "Basic markdown snippets extension for vscode",
+            "title_link": "https://marketplace.visualstudio.com/items?itemName=JoePhilip.markdown-code-snippets",
+            "description": "This extension is designed to enhance your Markdown editing experience by providing a collection of useful and time-saving code snippets that you can easily insert into your Markdown documents. Whether you're writing technical documentation, blog posts, or just taking notes, these snippets will help you format your content quickly and efficiently",
+            "profile": 1,
+            "created_at": "2023-10-16T01:37:01.133Z"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 1,
+        "fields": {
+            "project": 1,
+            "label": "View Repository",
+            "link": "https://github.com/joe-philip/calcPythonTkinter"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 2,
+        "fields": {
+            "project": 2,
+            "label": "Backend Repository",
+            "link": "https://github.com/joe-philip/random_password_generator_django"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 3,
+        "fields": {
+            "project": 2,
+            "label": "Frontend Repository",
+            "link": "https://github.com/joe-philip/random_password_generator_react"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 4,
+        "fields": {
+            "project": 2,
+            "label": "View Deployment",
+            "link": "https://joe-philip.github.io/random_password_gener"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 5,
+        "fields": {
+            "project": 3,
+            "label": "View Repository",
+            "link": "https://gitlab.com/joe-philip/python_code_snippets"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 6,
+        "fields": {
+            "project": 3,
+            "label": "View extension in VS Code marketplace",
+            "link": "https://marketplace.visualstudio.com/items?itemName=JoePhilip.pythondjangocodesnippet&ssr=false#overview"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 7,
+        "fields": {
+            "project": 3,
+            "label": "View Documentation page",
+            "link": "https://joe-philip.github.io/python_django_rest_framework_code_snippets/"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 8,
+        "fields": {
+            "project": 4,
+            "label": "View Repository",
+            "link": "https://github.com/joe-philip/markdown-snippets"
+        }
+    },
+    {
+        "model": "main.projectlinks",
+        "pk": 9,
+        "fields": {
+            "project": 4,
+            "label": "View Extension in vscode marketplace",
+            "link": "https://marketplace.visualstudio.com/items?itemName=JoePhilip.markdown-code-snippets"
+        }
+    },
+    {
+        "model": "main.contactinfo",
+        "pk": 1,
+        "fields": {
+            "profile": 1,
+            "key": "Name",
+            "value": "Joe Philip"
+        }
+    },
+    {
+        "model": "main.contactinfo",
+        "pk": 2,
+        "fields": {
+            "profile": 1,
+            "key": "Role",
+            "value": "Python web developer"
+        }
+    },
+    {
+        "model": "main.contactinfo",
+        "pk": 3,
+        "fields": {
+            "profile": 1,
+            "key": "Email",
+            "value": "joe.philip@hotmail.co.in"
+        }
+    },
+    {
+        "model": "main.contactinfo",
+        "pk": 4,
+        "fields": {
+            "profile": 1,
+            "key": "Phone",
+            "value": "+91 9633 689 769"
+        }
+    }
+]
