@@ -3,7 +3,8 @@ from collections import OrderedDict
 from rest_framework import serializers
 
 from .models import (ContactInfo, Profile, ProjectLinks, Projects,
-                     WorkExperience, WorkExperienceAdditionalData,
+                     WorkExperience, WorkExperienceAchievements,
+                     WorkExperienceAdditionalData,
                      WorkExperienceRolesAndResponsibilities)
 
 
@@ -68,21 +69,34 @@ class WorkExperienceRolesAndResponsibilitiesSerializer(serializers.ModelSerializ
         exclude = ('experience',)
 
 
+class WorkExperienceAchievementsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WorkExperienceAchievements
+        exclude = ('experience',)
+
+
 class WorkExperienceSerializer(serializers.ModelSerializer):
     work_experience_additional_data = serializers.SerializerMethodField()
     work_experience_roles_and_responsibilities = serializers.SerializerMethodField()
+    achievements = serializers.SerializerMethodField()
 
-    def get_work_experience_additional_data(self, instance: WorkExperience) -> OrderedDict:
+    def get_work_experience_additional_data(self, instance: WorkExperience) -> OrderedDict or list:
         queryset = WorkExperienceAdditionalData.objects.filter(
             experience=instance
         )
         return WorkExperienceAdditionalDataSerializer(queryset, many=True).data
 
-    def get_work_experience_roles_and_responsibilities(self, instance: WorkExperience) -> OrderedDict:
+    def get_work_experience_roles_and_responsibilities(self, instance: WorkExperience) -> OrderedDict or list:
         queryset = WorkExperienceRolesAndResponsibilities.objects.filter(
             experience=instance
         )
         return WorkExperienceRolesAndResponsibilitiesSerializer(queryset, many=True).data
+
+    def get_achievements(self, instance: WorkExperience) -> OrderedDict or list:
+        queryset = WorkExperienceAchievements.objects.filter(
+            experience=instance
+        )
+        return WorkExperienceAchievementsSerializer(queryset, many=True).data
 
     class Meta:
         model = WorkExperience

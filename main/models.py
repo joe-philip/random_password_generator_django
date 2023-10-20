@@ -93,7 +93,18 @@ class WorkExperienceRolesAndResponsibilities(models.Model):
     class Meta:
         db_table = 'work_experience_roles_and_responsibilities'
         verbose_name = 'Work experience role and responsibility'
-        verbose_name = 'Work experience roles and responsibilities'
+        verbose_name_plural = 'Work experience roles and responsibilities'
+
+    def __str__(self) -> str: return self.label
+
+
+class WorkExperienceAchievements(models.Model):
+    experience = models.ForeignKey(WorkExperience, on_delete=models.CASCADE)
+    label = models.CharField(max_length=30)
+
+    class Meta:
+        db_table = 'work_experience_achievements'
+        verbose_name = 'Work experience achievement'
 
     def __str__(self) -> str: return self.label
 

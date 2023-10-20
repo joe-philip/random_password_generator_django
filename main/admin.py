@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from .models import (ContactInfo, ContactUs, Profile, ProjectLinks, Projects,
                      Skills, SocialMedia, WorkExperience,
-                     WorkExperienceAdditionalData,
+                     WorkExperienceAchievements, WorkExperienceAdditionalData,
                      WorkExperienceRolesAndResponsibilities)
 
 # Register your models here.
@@ -62,3 +62,4 @@ admin.site.register(
 admin.site.register(Projects, ProjectsAdmin)
 admin.site.register(ProjectLinks, ProjectLinksAdmin)
 admin.site.register(ContactInfo, ContactInfoAdmin)
+admin.site.register(WorkExperienceAchievements)
