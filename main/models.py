@@ -23,7 +23,7 @@ class ContactUs(models.Model):
 
 
 class Skills(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, unique=True)
 
     class Meta:
         db_table = 'skills'
