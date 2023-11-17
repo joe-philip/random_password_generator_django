@@ -1,7 +1,8 @@
 from collections import OrderedDict
-from datetime import date
 
 from rest_framework import serializers
+
+from root.utils.utils import get_age
 
 from .models import (ContactInfo, Profile, ProjectLinks, Projects,
                      WorkExperience, WorkExperienceAchievements,
@@ -152,7 +153,11 @@ class ProfileSerializer(serializers.ModelSerializer):
         data = super().to_representation(instance)
         if dob := instance.dob:
             data['contact_info'].append(
-                {'key': 'Age', 'value': (date.today() - dob).days // 365}
+                {
+                    'id': 0,
+                    'key': 'Age',
+                    'value': get_age(dob)
+                }
             )
         return data
 
