@@ -148,6 +148,14 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = '__all__'
         depth = 1
 
+    def to_representation(self, instance: Profile) -> OrderedDict:
+        data = super().to_representation(instance)
+        if dob := instance.dob:
+            data['contact_info'].append(
+                {'key': 'Age', 'value': (date.today() - dob).days // 365}
+            )
+        return data
+
 
 class ContactInfoSerializer(serializers.ModelSerializer):
     class Meta:
