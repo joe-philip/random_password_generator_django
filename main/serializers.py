@@ -161,9 +161,3 @@ class ContactInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactInfo
         exclude = ('profile',)
-
-    def to_representation(self, instance: ContactInfo) -> OrderedDict:
-        data = super().to_representation(instance)
-        if dob := instance.profile.dob:
-            data['age'] = (date.today() - dob).days // 365
-        return data
