@@ -116,6 +116,11 @@ class ProjectSerializer(serializers.ModelSerializer):
         model = Projects
         exclude = ('profile',)
 
+    def to_representation(self, instance: Projects) -> OrderedDict:
+        data = super().to_representation(instance)
+        data['description'] = instance.dynamic_project_info
+        return data
+
 
 class ProjectLinksSerializer(serializers.ModelSerializer):
     class Meta:
