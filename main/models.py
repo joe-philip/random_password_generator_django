@@ -121,7 +121,10 @@ class Projects(models.Model):
     description = models.TextField(null=True)
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    project_store_type = models.IntegerField(ProjectStoreTypeChoices.choices)
+    project_store_type = models.IntegerField(
+        ProjectStoreTypeChoices.choices,
+        default=3
+    )
     store_url = models.URLField(null=True)
 
     @property
