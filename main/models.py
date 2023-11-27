@@ -1,3 +1,4 @@
+import requests
 from django.db import models
 
 # Create your models here.
@@ -111,11 +112,24 @@ class WorkExperienceAchievements(models.Model):
 
 
 class Projects(models.Model):
+    class ProjectStoreTypeChoices(models.IntegerChoices):
+        VS_CODE_MARKETPLACE = 1, 'vs_code_marketplace'
+        PYPI = 2, 'PyPI'
+        NA = 3, 'NA'
     title = models.CharField(max_length=50)
     title_link = models.URLField(null=True)
-    description = models.TextField()
+    description = models.TextField(null=True)
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    project_store_type = models.IntegerField(ProjectStoreTypeChoices.choices)
+    store_url = models.URLField(null=True)
+
+    @property
+    def dynamic_project_info(self) -> str:
+        if self.project_store_type == 2 and self.store_url:
+            response = requests.get(self.store_url).json()
+            return response.get('info', '').get('summary', '')
+        return self.description
 
     class Meta:
         db_table = 'projects'
