@@ -116,6 +116,11 @@ class Projects(models.Model):
         VS_CODE_MARKETPLACE = 1, 'vs_code_marketplace'
         PYPI = 2, 'PyPI'
         NA = 3, 'NA'
+
+    class RepoTypeChoices(models.IntegerChoices):
+        GITLAB = 1, 'gitlab'
+        GITHUB = 2, 'github'
+        NA = 3, 'NA'
     title = models.CharField(max_length=50)
     title_link = models.URLField(null=True)
     description = models.TextField(null=True)
@@ -126,6 +131,11 @@ class Projects(models.Model):
         default=3
     )
     store_url = models.URLField(null=True)
+    repo_url = models.URLField(null=True)
+    repo_type = models.IntegerField(
+        RepoTypeChoices.choices,
+        default=3
+    )
 
     @property
     def dynamic_project_info(self) -> str:
